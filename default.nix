@@ -1,3 +1,7 @@
 let
   sources = import ./nix/sources.nix;
-in sources.nixpkgs
+
+  pkgs = import sources.nixpkgs {
+    overlays = [];
+  };
+in pkgs
